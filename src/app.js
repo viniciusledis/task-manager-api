@@ -4,7 +4,7 @@ app.post('/tasks', (req, res) => {
   res.status(201).json(task);
 });
 
-
-app.get('/tasks', (req, res) => {
-  res.json(tasks);
+app.put('/tasks/:id', (req, res) => {
+  tasks[req.params.id] = req.body;
+  res.json(tasks[req.params.id]);
 });
