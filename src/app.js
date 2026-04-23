@@ -3,3 +3,8 @@ app.post('/tasks', (req, res) => {
   tasks.push(task);
   res.status(201).json(task);
 });
+
+
+app.get('/tasks', (req, res) => {
+  res.json(tasks);
+});
